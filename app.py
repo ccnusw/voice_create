@@ -163,8 +163,8 @@ with st.sidebar:
     st.markdown("---")
     st.info(f"💡 当前模型: **{get_voice(gender, age_group)}**")
 
-st.title("🎙️ AI文本转语音生成器【智能优化版】")
-st.markdown("##### 自动识别中英文环境，智能处理符号与数字读音")
+st.title("🎙️ AI文本转语音生成器demo")
+st.markdown("##### 自动识别中英文环境")
 
 tab1, tab2 = st.tabs(["📝 文本输入", "📂 文件上传 (TXT/PDF)"])
 input_text = ""
@@ -224,5 +224,6 @@ if generate_btn:
                 st.download_button(label="📥 下载 MP3 文件", data=audio_bytes, file_name="generated_audio.mp3", mime="audio/mp3")
             except Exception as e:
                 st.error(f"❌ 生成错误: {e}")
+
 
 st.markdown("<div class='footer'>华中师范大学沈威制作 &nbsp;&nbsp;|&nbsp;&nbsp; 邮箱：sw@ccnu.edu.cn</div>", unsafe_allow_html=True)
